@@ -2619,8 +2619,16 @@ select.mobile-device {
 /* Footer left */
 
 .footer-distributed .footer-left {
+    display: flex;
+    justify-content: center;
     float: none;
     text-align: center;
+}
+.enamad {
+    cursor: pointer;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 5px;
 }
 
 .footer-distributed .footer-links {
