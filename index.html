@@ -28,6 +28,7 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
 <script src="js/modernizr.js"></script> <!-- Modernizr -->
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -502,6 +503,32 @@
 		</div><!-- end container -->
 	</div><!-- end section -->
 
+	<div id="services" class="section lb">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>پرداخت صورتحساب</h3>
+				<p>کاملا تستی، پرداخت انجام خواهد شد!
+				</p>
+			</div><!-- end title -->
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-discuss-issue"></i>
+						</div>
+						<h2>جهت پرداخت کلیک کنید</h2>
+						<button onclick="getPayment()" id="payment-button"
+							class="sim-btn btn-new from-middle animated">پرداخت
+						</button>
+
+					</div>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+
 	<div class="copyrights">
 		<div class="container">
 			<div class="footer-distributed">
@@ -542,6 +569,7 @@
 	<script src="js/contact_me.js"></script>
 	<!-- ALL PLUGINS -->
 	<script src="js/custom.js"></script>
+	<script type="text/javascript" src="js/api.js"></script> <!-- call apis -->
 </body>
 
 </html>
