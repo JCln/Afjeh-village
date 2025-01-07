@@ -1,4 +1,4 @@
-axios.defaults.baseURL = 'http://130.185.75.117/KontoriNew';
+axios.defaults.baseURL = 'https://130.185.75.117/KontoriNew';
 const bankUrl = 'https://sep.shaparak.ir/OnlinePG/SendToken?token=';
 
 async function getPayment() {
