@@ -41,6 +41,8 @@ body {
     --def: #ffffff;
     --inv: #009bb7;
     color: #999999;
+    --color-red-3: #FF734F;
+    --color-red-5: #FF5325;
     font-size: 14px;
     font-family: var(--font-family);
     line-height: 1.80857;
@@ -50,6 +52,7 @@ body {
 html,
 body {
     height: 100%;
+    box-sizing: border-box;
 }
 
 body.demos .section {
@@ -2624,6 +2627,7 @@ select.mobile-device {
     float: none;
     text-align: center;
 }
+
 .enamad {
     cursor: pointer;
     width: 8rem;
@@ -2934,3 +2938,85 @@ select.mobile-device {
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
 }
+
+
+/* bank response */
+.bank-response {
+    background: var(--color-red-5);
+}
+
+.right_side {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bank-message {
+    rotate: 60deg;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    position: absolute;    
+    justify-content: center;
+    transform: translateY(0rem);
+}
+
+.right_side_wrapper {
+    bottom: 0;
+    right: -50%;
+    top: 0;
+    position: absolute;
+    border-radius: 130px;
+    background: var(--color-red-3);
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-start;
+    rotate: -60deg;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-25%);
+}
+
+.right_side h1 {
+    border-right-style: inset;
+    color: var(--def);
+    font-size: 4rem;
+}
+
+.bank-container {
+    display: flex;
+    position: fixed;
+}
+
+.left_side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-left-wrapper {
+    border-radius: 15px;
+    border-bottom: 2px solid var(--def);
+    width: 20rem;
+    height: 15rem;
+    text-align: center;
+}
+
+.bank-left-inset {
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+    height: 90%;
+    background-color: whitesmoke;
+}
+
+.bank-details {
+    columns: 2;
+}
+
+.bank-details>div {
+    color: var(--inv);
+}
+
+/* end bank response */
