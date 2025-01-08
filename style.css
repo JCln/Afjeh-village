@@ -38,15 +38,19 @@
 }
 
 body {
-    --def: #ffffff;
+    --white: #ffffff;
     --inv: #009bb7;
-    color: #999999;
+    --color-green-3: #4fff9b;
     --color-red-3: #FF734F;
-    --color-red-5: #FF5325;
+    --color-red-1: #ffad97;
     font-size: 14px;
     font-family: var(--font-family);
     line-height: 1.80857;
     direction: rtl;
+    color: #999999;
+    --color-10: #1f1f1f;
+    --color-9: #666;
+    --color-5: #cccccc;
 }
 
 html,
@@ -69,13 +73,13 @@ body.demos .service-widget h3 {
     border-bottom: 1px solid #ededed;
     font-size: 18px;
     padding: 20px 0;
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 body.demos .service-widget {
     margin: 0 0 30px;
     padding: 30px;
-    background-color: #fff
+    background-color: var(--white)
 }
 
 body.demos .container-fluid {
@@ -83,7 +87,7 @@ body.demos .container-fluid {
 }
 
 a {
-    color: #1f1f1f;
+    color: var(--color-10);
     text-decoration: none !important;
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
@@ -348,7 +352,7 @@ a img.aligncenter {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-    color: #ffffff;
+    color: var(--white);
     background: #faad3b
 }
 
@@ -395,7 +399,7 @@ a img.aligncenter {
     transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
     cursor: pointer;
     background: #faad3b;
-    color: #ffffff;
+    color: var(--white);
     display: inline-block;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -412,7 +416,7 @@ a img.aligncenter {
 }
 
 .btn-new:hover {
-    color: var(--def);
+    color: var(--white);
     transition-delay: .6s;
 }
 
@@ -484,7 +488,7 @@ a img.aligncenter {
 }
 
 .heading {
-    color: #fff;
+    color: var(--white);
     display: table-cell;
     vertical-align: middle;
     position: relative;
@@ -492,7 +496,7 @@ a img.aligncenter {
 }
 
 .heading h1 {
-    color: #ffffff;
+    color: var(--white);
     font-weight: 700;
     font-size: 62px;
     text-transform: uppercase;
@@ -541,7 +545,7 @@ xclip
 .cd-headline.clip span {
     display: inline-block;
     padding: .2em 0;
-    color: #ffffff;
+    color: var(--white);
     font-size: 30px;
 }
 
@@ -577,7 +581,7 @@ xclip
 #mainNav.navbar-shrink {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-bottom: 4px solid #faad3b;
 }
 
@@ -618,7 +622,7 @@ xclip
 }
 
 .section.wb {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .section.lb {
@@ -641,7 +645,7 @@ xclip
 }
 
 .first-section h2 {
-    color: #ffffff;
+    color: var(--white);
     font-size: 68px;
     font-weight: 300;
     text-transform: capitalize;
@@ -657,7 +661,7 @@ xclip
     padding: 0 0 40px;
     margin: 0;
     line-height: inherit;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .macbookright {
@@ -693,7 +697,7 @@ xclip
 .section.colorsection p,
 .section.colorsection h3,
 .section.db h3 {
-    color: #ffffff;
+    color: var(--white);
 }
 
 
@@ -782,7 +786,7 @@ xclip
 
 .ser-icon i {
     font-size: 50px;
-    color: #ffffff;
+    color: var(--white);
     position: relative;
     z-index: 1;
 }
@@ -801,11 +805,11 @@ xclip
 }
 
 .services-inner-box:hover h2 {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .services-inner-box:hover p {
-    color: #ffffff;
+    color: var(--white);
 }
 
 
@@ -874,7 +878,7 @@ xclip
     box-shadow: none;
     background-color: transparent;
     border: 1px solid #e6e7e6 !important;
-    color: #1f1f1f;
+    color: var(--color-10);
     font-weight: 400;
     font-size: 13px;
     padding: 10px 30px;
@@ -911,7 +915,7 @@ xclip
 
 .da-thumbs .pitem a div h3 {
     display: block;
-    color: #ffffff;
+    color: var(--white);
     font-size: 20px;
     padding: 30px 15px;
     text-transform: capitalize;
@@ -920,16 +924,16 @@ xclip
 
 .da-thumbs .pitem a div h3 small {
     display: block;
-    color: #ffffff;
+    color: var(--white);
     margin-top: 5px;
     font-size: 13px;
     font-weight: 300;
 }
 
 .da-thumbs .pitem a div i {
-    background-color: #1f1f1f;
+    background-color: var(--color-10);
     position: absolute;
-    color: #ffffff !important;
+    color: var(--white) fff !important;
     bottom: 0;
     font-size: 15px;
     z-index: 12;
@@ -958,7 +962,7 @@ xclip
 }
 
 .desc i {
-    color: #ffffff;
+    color: var(--white);
     font-size: 37px;
     vertical-align: middle;
     margin-right: 12px;
@@ -1012,7 +1016,7 @@ xclip
 .testimonial small,
 .testimonial .lead {
     background-color: transparent;
-    color: #ffffff;
+    color: var(--white);
     display: block;
     font-size: 16px;
     font-style: normal;
@@ -1054,7 +1058,7 @@ xclip
 .pricing-table strong {
     font-weight: 600;
     margin-right: 6px;
-    color: #1f1f1f;
+    color: var(--color-10);
 }
 
 .pricing-table-header {
@@ -1107,7 +1111,7 @@ xclip
 
 .pricing-table-highlighted h3,
 .pricing-table-highlighted h2 {
-    color: #ffffff !important;
+    color: var(--white) fff !important;
 }
 
 .pricing-table-sign-up {
@@ -1162,7 +1166,7 @@ xclip
     line-height: 75px;
     font-size: 28px;
     background-color: #f2f3f5;
-    color: #1f1f1f;
+    color: var(--color-10);
     margin-top: 0;
 }
 
@@ -1258,7 +1262,7 @@ xclip
 
 .service-widget h3 {
     font-size: 21px;
-    color: #ffffff;
+    color: var(--white);
     padding: 20px 0 12px;
     margin: 0;
 }
@@ -1325,7 +1329,7 @@ xclip
 .service-widget h3 a,
 .section.wb .service-widget h3,
 .section.lb .service-widget h3 {
-    color: #1f1f1f;
+    color: var(--color-10);
 }
 
 .service-widget p {
@@ -1380,7 +1384,7 @@ xclip
     text-align: center;
     line-height: 40px;
     border-radius: var(--border-radius_7);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .message-box ul li a:hover {
@@ -1427,16 +1431,16 @@ xclip
 
 .section.wb .hover-up h3 {
     font-size: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .section.wb .hover-up p {
-    color: #cccccc;
+    color: var(--color-5);
 }
 
 .playbutton {
     position: absolute;
-    color: #ffffff !important;
+    color: var(--white) fff !important;
     top: 40%;
     font-size: 60px;
     z-index: 12;
@@ -1449,7 +1453,7 @@ xclip
 .hoverbutton {
     background-color: #333333;
     position: absolute;
-    color: #ffffff !important;
+    color: var(--white) fff !important;
     top: 70%;
     font-size: 21px;
     z-index: 12;
@@ -1508,7 +1512,7 @@ hr.invis1 {
     bottom: -20px;
     left: 50%;
     margin-left: -14px;
-    background-color: #1f1f1f;
+    background-color: var(--color-10);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -1524,7 +1528,7 @@ hr.invis1 {
     top: -20px;
     left: 50%;
     margin-left: -14px;
-    background-color: #1f1f1f;
+    background-color: var(--color-10);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -1593,7 +1597,7 @@ hr.invis1 {
 
 .filter-button-group button.active {
     background: #faad3b;
-    color: #fff;
+    color: var(--white);
     box-shadow: 2px 20px 45px 5px rgba(0, 0, 0, .2);
 }
 
@@ -1674,7 +1678,7 @@ hr.invis1 {
     top: 20px;
     right: 20px;
     content: '';
-    background-color: #fff;
+    background-color: var(--white);
     z-index: 99;
     opacity: 0;
 }
@@ -1741,7 +1745,7 @@ hr.invis1 {
     font-size: 1.1em;
     font-weight: normal;
     opacity: 0;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .spi-hr:hover h3,
@@ -1771,7 +1775,7 @@ hr.invis1 {
     bottom: 0px;
     right: 0px;
     background: #333333;
-    color: #fff;
+    color: var(--white);
     padding: 10px 15px;
     text-align: center;
 }
@@ -1842,7 +1846,7 @@ hr.invis1 {
 
 .customwidget h1 {
     font-size: 44px;
-    color: #ffffff;
+    color: var(--white);
     padding: 15px 0 25px;
     margin: 0;
     line-height: 1 !important;
@@ -1860,7 +1864,7 @@ hr.invis1 {
 }
 
 .customwidget li {
-    color: #ffffff;
+    color: var(--white);
     margin-right: 10px;
 }
 
@@ -2125,7 +2129,7 @@ hr.invis1 {
 }
 
 .bootstrap-select.btn-group .dropdown-menu li.active small {
-    color: #fff;
+    color: var(--white);
 }
 
 .bootstrap-select.btn-group .dropdown-menu li.disabled a {
@@ -2370,7 +2374,7 @@ select.mobile-device {
 
 
 #contact .section-title p {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .contact_form textarea.form-control {
@@ -2427,7 +2431,7 @@ select.mobile-device {
     z-index: 1;
     opacity: 1;
     padding: 30px 0 30px 10px;
-    background-color: #ffffff;
+    background-color: var(--white);
     width: 60%;
     -webkit-transform: translateX(150%);
     transform: translateX(150%);
@@ -2473,7 +2477,7 @@ select.mobile-device {
     left: 0;
     padding: 20px 30px;
     font-size: 44px;
-    color: #ffffff;
+    color: var(--white);
     opacity: 0;
 }
 
@@ -2519,7 +2523,7 @@ select.mobile-device {
 }
 
 .cac:hover a h3 {
-    color: #fff !important;
+    color: var(--white) !important;
 }
 
 .cac a h3 {
@@ -2538,7 +2542,7 @@ select.mobile-device {
 .footer {
     padding: 90px 0 80px !important;
     color: #999;
-    background-color: #1f1f1f;
+    background-color: var(--color-10);
 }
 
 .footer .widget-title {
@@ -2555,7 +2559,7 @@ select.mobile-device {
 }
 
 .footer .widget-title h3 {
-    color: #fff;
+    color: var(--white);
     font-weight: 300;
     font-size: 21px;
     padding: 0;
@@ -2610,7 +2614,7 @@ select.mobile-device {
 
 .copyrights {
     border-top: 0px;
-    background-color: #1f1f1f;
+    background-color: var(--color-10);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
@@ -2651,7 +2655,7 @@ select.mobile-device {
 .footer-distributed .footer-company-name {
     font-weight: 300;
     margin: 0 10px;
-    color: #666;
+    color: var(--color-9);
     padding: 0;
 }
 
@@ -2718,11 +2722,11 @@ select.mobile-device {
 }
 
 .footer-distributed .footer-company-name a {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .footer-distributed .footer-company-name a:hover {
-    color: #cccccc;
+    color: var(--color-5);
 }
 
 /*------------------------------------------------------------------
@@ -2757,7 +2761,7 @@ select.mobile-device {
     right: 20px;
     text-align: center;
     font-size: 28px;
-    color: #ffffff !important;
+    color: var(--white) fff !important;
     cursor: pointer;
     -webkit-transition: all .7s ease-in-out;
     -moz-transition: all .7s ease-in-out;
@@ -2771,13 +2775,13 @@ select.mobile-device {
 }
 
 .icon_wrap {
-    background-color: #1f1f1f;
+    background-color: var(--color-10);
     width: 100px;
     height: 100px;
     display: block;
     line-height: 100px;
     font-size: 34px;
-    color: #ffffff;
+    color: var(--white);
     margin: 0 auto;
     text-align: center;
     padding: 0 !important;
@@ -2795,7 +2799,7 @@ select.mobile-device {
 
 .stat-wrap p {
     font-size: 38px;
-    color: #ffffff;
+    color: var(--white);
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
@@ -2921,7 +2925,7 @@ select.mobile-device {
     padding: 10px 40px;
     font-size: 18px;
     border: 2px solid #ffffff !important;
-    color: #ffffff;
+    color: var(--white);
     background-color: transparent;
 }
 
@@ -2929,7 +2933,7 @@ select.mobile-device {
     padding: 13px 40px;
     font-size: 18px;
     border: 1px solid #ececec !important;
-    color: #1f1f1f;
+    color: var(--color-10);
     background-color: transparent;
 }
 
@@ -2942,7 +2946,7 @@ select.mobile-device {
 
 /* bank response */
 .bank-response {
-    background: var(--color-red-5);
+    background: var(--color-red-1);
 }
 
 .right_side {
@@ -2952,14 +2956,23 @@ select.mobile-device {
 }
 
 .bank-message {
-    rotate: 60deg;
-    width: 60%;
-    display: flex;
-    align-items: center;
-    height: 50%;
-    position: absolute;    
-    justify-content: center;
-    transform: translateY(0rem);
+    margin-bottom: 2rem;
+}
+
+.bank-message h1 {
+    font-size: 1.5rem;
+}
+
+.bank-icon-size {
+    font-size: 3rem;
+}
+
+.un-success-color {
+    color: var(--color-red-3);
+}
+
+.success-color {
+    color: var(--color-green-3);
 }
 
 .right_side_wrapper {
@@ -2980,43 +2993,53 @@ select.mobile-device {
 
 .right_side h1 {
     border-right-style: inset;
-    color: var(--def);
+    color: var(--white);
     font-size: 4rem;
 }
 
 .bank-container {
-    display: flex;
+    display: grid;
     position: fixed;
-}
-
-.left_side {
-    display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.bank-left-wrapper {
-    border-radius: 15px;
-    border-bottom: 2px solid var(--def);
-    width: 20rem;
-    height: 15rem;
+    height: 100%;
+    width: 100%;
     text-align: center;
 }
 
-.bank-left-inset {
+
+.bank-inset {
+    width: 97%;
     border-radius: 15px;
+    background: var(--white);
+    margin: 1rem auto;
     padding: 1rem;
-    margin: 1rem;
-    height: 90%;
-    background-color: whitesmoke;
+}
+
+@media (min-width:550px) {
+    .bank-inset {
+        width: 100%;
+        max-width: 25rem;
+    }
 }
 
 .bank-details {
     columns: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.bank-details :nth-child(odd) {
+    text-align: right;
+}
+
+.bank-details :nth-child(even) {
+    text-align: left;
 }
 
 .bank-details>div {
-    color: var(--inv);
+    color: var(--color-10);
 }
 
 /* end bank response */

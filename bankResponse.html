@@ -14,52 +14,40 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-
-<!-- Site Icons -->
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-<!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Site CSS -->
 <link rel="stylesheet" href="style.css">
-<!-- Responsive CSS -->
 <link rel="stylesheet" href="css/responsive.css">
-<!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
 <script src="js/modernizr.js"></script> <!-- Modernizr -->
 <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<script type="text/javascript" src="js/bankResponse.js"></script>
 
 </head>
 
 <body class="bank-response">
     <div class="bank-container">
-        <div class="col-md-6 right_side">
-            <div class="right_side_wrapper">
-                <div class="bank-message">
-                    <h1>تراکنش ناموفق</h1>
-                </div>
+        <div class="bank-inset">
+            <i class="bank-icon-size un-success-color fa fa-times-circle"></i>
+            <div class="bank-message">
+                <h1 class="un-success-color">تراکنش ناموفق</h1>
             </div>
+            <div class="bank-details">
+                <div>شماره صورتحساب:</div>
+                <div>2</div>
+                <div>تاریخ پرداخت:</div>
+                <div>1403/10/17</div>
+                <div>شماره کارت:</div>
+                <div>606373********5411:</div>
+                <div>هزینه تراکنش:</div>
+                <div>269،000 تومان</div>
+                <div>شماره پیگیری:</div>
+                <div>sgllkjsdfliuwer</div>
+            </div>
+            <!-- <button class="sim-btn btn-new from-middle">
+                پرداخت
+            </button> -->
         </div>
-        <div class="col-md-4 left_side">
-            <div class="bank-left-wrapper">
-                <div class="bank-left-inset">
-                    <div class="bank-details">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                    </div>
-                    <button class="sim-btn btn-new from-middle">
-                        پرداخت
-                    </button>
-                </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end section -->
+    </div>
 </body>
