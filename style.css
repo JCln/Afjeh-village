@@ -2943,12 +2943,6 @@ select.mobile-device {
     color: rgba(255, 255, 255, 0.6);
 }
 
-
-/* bank response */
-.bank-response {
-    background: var(--color-red-1);
-}
-
 .right_side {
     position: relative;
     width: 100vw;
@@ -2965,6 +2959,14 @@ select.mobile-device {
 
 .bank-icon-size {
     font-size: 3rem;
+}
+
+.success-background {
+    background: var(--color-green-3);
+}
+
+.un-success-background {
+    background: var(--color-red-1);
 }
 
 .un-success-color {
