@@ -51,6 +51,7 @@ body {
     --color-10: #1f1f1f;
     --color-9: #666;
     --color-5: #cccccc;
+    --color-3: #f2f3f5;
 }
 
 html,
@@ -179,6 +180,14 @@ a,
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+}
+
+.pay-button {
+    border-right: .5px solid gray;
+    margin-right: 1rem;
+    display: grid;
+    padding-right: 1rem;
+    gap: .5rem;
 }
 
 .btn-custom {
@@ -406,6 +415,36 @@ a img.aligncenter {
     -ms-user-select: none;
     user-select: none;
 }
+
+.btn-payment {
+    position: relative;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    color: var(--inv);
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    background: #faad3b;
+    color: var(--white);
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.payment-table-td {
+    padding: .5rem 0;
+    color: #000;
+}
+
+.payment-table-td-title {
+    color: #000;
+}
+
 
 .btn-new:before,
 .btn-new:after {
@@ -2962,11 +3001,11 @@ select.mobile-device {
 }
 
 .success-background {
-    background: var(--color-green-3);
+    background: var(--color-3);
 }
 
 .un-success-background {
-    background: var(--color-red-1);
+    background: var(--color-3);
 }
 
 .un-success-color {
@@ -3043,5 +3082,3 @@ select.mobile-device {
 .bank-details>div {
     color: var(--color-10);
 }
-
-/* end bank response */

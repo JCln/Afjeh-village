@@ -26,7 +26,6 @@
 <!-- Responsive CSS -->
 <link rel="stylesheet" href="css/responsive.css">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="css/custom.css">
 <script src="js/modernizr.js"></script> <!-- Modernizr -->
 <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
@@ -38,7 +37,44 @@
 </head>
 
 <body id="page-top" class="politics_version">
+	<div id="loading-spinner" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+">
+		<div style="
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  "></div>
+	</div>
+	<div id="toast-container" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+"></div>
+	<style>
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
 
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
 	<!-- LOADER -->
 	<div id="preloader">
 		<div class="loader">
@@ -75,6 +111,9 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link js-scroll-trigger" href="#portfolio">گالری</a>
+					</li>
+					<li class="nav-item" id="payments">
+						<a class="nav-link js-scroll-trigger" href="#payment-method">پرداخت صورتحساب</a>
 					</li>
 					<!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a>
@@ -355,99 +394,6 @@
 	</div>
 	</div>
 
-	<!-- <div id="testimonials" class="section wb">
-		<div class="container">
-			<div class="section-title text-center">
-				<h3>Testimonials</h3>
-				<p>We thanks for all our awesome testimonials! There are hundreds of our happy customers! </p>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="testi-carousel owl-carousel owl-theme">
-						<div class="testimonial clearfix">
-							<div class="desc">
-								<h3> Wonderful Support!</h3>
-								<p class="lead">They have got my project on time with the competition with a sed highly
-									skilled, and experienced & professional team.</p>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="testi-meta">
-								<img src="uploads/testi_01.png" alt="" class="img-fluid">
-								<h4>James Fernando </h4>
-							</div>
-						</div>
-
-						<div class="testimonial clearfix">
-							<div class="desc">
-								<h3> Awesome Services!</h3>
-								<p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and
-									praising pain was born and I will give you completed.</p>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="testi-meta">
-								<img src="uploads/testi_02.png" alt="" class="img-fluid">
-								<h4>Jacques Philips </h4>
-							</div>
-						</div>
-
-						<div class="testimonial clearfix">
-							<div class="desc">
-								<h3> Great & Talented Team!</h3>
-								<p class="lead">The master-builder of human happines no one rejects, dislikes avoids
-									pleasure itself, because it is very pursue pleasure. </p>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="testi-meta">
-								<img src="uploads/testi_03.png" alt="" class="img-fluid">
-								<h4>Venanda Mercy </h4>
-							</div>
-						</div>
-						<div class="testimonial clearfix">
-							<div class="desc">
-								<h3> Wonderful Support!</h3>
-								<p class="lead">They have got my project on time with the competition with a sed highly
-									skilled, and experienced & professional team.</p>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="testi-meta">
-								<img src="uploads/testi_01.png" alt="" class="img-fluid">
-								<h4>James Fernando </h4>
-							</div>
-						</div>
-
-						<div class="testimonial clearfix">
-							<div class="desc">
-								<h3> Awesome Services!</h3>
-								<p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and
-									praising pain was born and I will give you completed.</p>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="testi-meta">
-								<img src="uploads/testi_02.png" alt="" class="img-fluid">
-								<h4>Jacques Philips </h4>
-							</div>
-						</div>
-
-						<div class="testimonial clearfix">
-							<div class="desc">
-								<h3> Great & Talented Team!</h3>
-								<p class="lead">The master-builder of human happines no one rejects, dislikes avoids
-									pleasure itself, because it is very pursue pleasure. </p>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="testi-meta">
-								<img src="uploads/testi_03.png" alt="" class="img-fluid">
-								<h4>Venanda Mercy </h4>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 	<div id="contact" class="section db">
 		<div class="container">
 			<div class="section-title text-center">
@@ -503,25 +449,23 @@
 		</div><!-- end container -->
 	</div><!-- end section -->
 
-	<div id="services" class="section lb">
+	<div id="payment-method" class="section lb">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>پرداخت صورتحساب</h3>
-				<p>کاملا تستی، پرداخت انجام خواهد شد!
-				</p>
 			</div><!-- end title -->
 
 			<div class="row">
 				<div class="col-md-4">
-					<div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-discuss-issue"></i>
+					<div class="" style="display: flex;">
+						<div class="pay-button">
+							<div style="display: flex; gap: 3rem;">
+								<table style="width: 18rem;">
+									<tbody id="userData">
+									</tbody>
+								</table>
+							</div>
 						</div>
-						<h2>جهت پرداخت کلیک کنید</h2>
-						<button onclick="getPayment()" id="payment-button"
-							class="sim-btn btn-new from-middle animated">پرداخت
-						</button>
-
 					</div>
 				</div><!-- end col -->
 			</div><!-- end row -->
@@ -532,6 +476,13 @@
 	<div class="copyrights">
 		<div class="container">
 			<div class="footer-distributed">
+				<div>
+					<a referrerpolicy='origin' target='_blank'
+						href='https://trustseal.enamad.ir/?id=545562&Code=0V5lueXU8bi9ZJNLO8NNEvqxEbFw939q'>
+						<img class="enamad" referrerpolicy='origin'
+							src='https://trustseal.enamad.ir/logo.aspx?id=545562&Code=0V5lueXU8bi9ZJNLO8NNEvqxEbFw939q'
+							alt='' style='cursor:pointer' code='0V5lueXU8bi9ZJNLO8NNEvqxEbFw939q'></a>
+				</div>
 				<div class="footer-left">
 					(
 					<p class="version"></p>
@@ -542,13 +493,6 @@
 							شرکت هیوا پرداز اطلس
 						</a>
 					</p>
-				</div>
-				<div>
-					<a referrerpolicy='origin' target='_blank'
-						href='https://trustseal.enamad.ir/?id=545562&Code=0V5lueXU8bi9ZJNLO8NNEvqxEbFw939q'>
-						<img class="enamad" referrerpolicy='origin'
-							src='https://trustseal.enamad.ir/logo.aspx?id=545562&Code=0V5lueXU8bi9ZJNLO8NNEvqxEbFw939q'
-							alt='' style='cursor:pointer' code='0V5lueXU8bi9ZJNLO8NNEvqxEbFw939q'></a>
 				</div>
 			</div>
 		</div><!-- end container -->
@@ -570,6 +514,7 @@
 	<!-- ALL PLUGINS -->
 	<script src="js/custom.js"></script>
 	<script type="text/javascript" src="js/api.js"></script> <!-- call apis -->
+	<script type="text/javascript" src="js/interceptor.js"></script> <!-- call apis -->
 </body>
 
 </html>
