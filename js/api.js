@@ -38,30 +38,22 @@ async function callApiWithParams() {
             response = response.data;
             document.getElementById('userData').innerHTML = `
             <tr>
-											<td class="payment-table-td-title">نام کامل</td>
-											<td class="payment-table-td" style="text-align: left;">${response.fullName}</td>
-										</tr>
-										<tr>
-											<td class="payment-table-td-title">موبایل</td>
-											<td class="payment-table-td" style="text-align: left;">${response.mobile}</td>
-										</tr>
-										<tr>
-											<td class="payment-table-td-title">تاریخ صدور</td>
-											<td class="payment-table-td" style="text-align: left;">${response.issueDate}</td>
-										</tr>
-										<tr>
-											<td class="payment-table-td-title">مبلغ</td>
-											<td class="payment-table-td" style="text-align: left;">${response.amount}</td>
-										</tr>
-										<tr>
-											<td class="payment-table-td-title"></td>
-											<td class="payment-table-td" style="text-align: left;">
-												<button id="payment-button"
-													class="sim-btn btn-payment">
-													پرداخت
-												</button>
-											</td>
-										</tr>
+									<td class="payment-table-td-title">نام کامل</td>
+									<td class="payment-table-td" style="text-align: left;">${response.fullName}</td>
+								</tr>
+								<tr>
+									<td class="payment-table-td-title">موبایل</td>
+									<td class="payment-table-td" style="text-align: left;">${response.mobile}</td>
+								</tr>
+								<tr>
+									<td class="payment-table-td-title">تاریخ صدور</td>
+									<td class="payment-table-td" style="text-align: left;">${response.issueDate}</td>
+								</tr>
+								<tr>
+									<td class="payment-table-td-title">مبلغ( ریال)</td>
+									<td class="payment-table-td" style="text-align: left;">
+										${response.amount.toLocaleString()}</td>
+								</tr>								
                                         `
             // Example API call with parameters
             // Replace with your actual API endpoint

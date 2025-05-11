@@ -35,6 +35,7 @@
 :root {
     font-family: "Vazirmatn", sans-serif;
     --border-radius_7: 7px;
+    box-sizing: border-box;
 }
 
 body {
@@ -183,11 +184,13 @@ a,
 }
 
 .pay-button {
-    border-right: .5px solid gray;
-    margin-right: 1rem;
+    margin: 0 .5rem;
     display: grid;
-    padding-right: 1rem;
     gap: .5rem;
+}
+
+.pay-button td {
+    font-size: 1.3rem;
 }
 
 .btn-custom {
@@ -417,19 +420,17 @@ a img.aligncenter {
 }
 
 .btn-payment {
-    position: relative;
     padding: 5px 10px;
     font-size: 14px;
     width: 100%;
     border: none;
-    color: var(--inv);
+    border-radius: 7px;
     letter-spacing: 0px;
     text-transform: uppercase;
     transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
     cursor: pointer;
-    background: #faad3b;
+    background: var(--inv);
     color: var(--white);
-    display: inline-block;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -2606,28 +2607,6 @@ select.mobile-device {
     line-height: 1 !important;
 }
 
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links a {
-    color: #999;
-}
-
-.footer-links a:hover,
-.footer a:hover {
-    color: #333333 !important;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-    display: block;
-    width: 100%;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
-}
-
 .twitter-widget li {
     margin-bottom: 0;
     border: 0 !important;
@@ -2636,19 +2615,6 @@ select.mobile-device {
 .twitter-widget li i {
     border-right: 0 !important;
     margin-right: 0;
-}
-
-.footer-links li:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border: 0;
-}
-
-.footer-links i {
-    display: inline-block;
-    width: 25px;
-    margin-right: 10px;
-    border-right: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .copyrights {
@@ -2663,8 +2629,12 @@ select.mobile-device {
 
 
 /* Footer left */
+.footer-distributed {
+    text-align: center;
+}
 
 .footer-distributed .footer-left {
+    margin: 1rem 0;
     display: flex;
     justify-content: center;
     float: none;
@@ -2676,19 +2646,6 @@ select.mobile-device {
     width: 8rem;
     height: 8rem;
     border-radius: 5px;
-}
-
-.footer-distributed .footer-links {
-    margin: 0 0 10px;
-    text-transform: uppercase;
-    padding: 0;
-}
-
-.footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1.8;
-    margin: 0 10px 0 10px;
-    text-decoration: none;
 }
 
 .footer-distributed .footer-company-name {
@@ -2703,61 +2660,6 @@ select.mobile-device {
 
 .footer-distributed .footer-right {
     float: right;
-}
-
-
-/* The search form */
-
-.footer-distributed form {
-    position: relative;
-}
-
-.footer-distributed form input {
-    display: block;
-    border-radius: 3px;
-    box-sizing: border-box;
-    background-color: #181818;
-    border: none;
-    font: inherit;
-    font-size: 15px;
-    font-weight: normal;
-    color: #999;
-    width: 400px;
-    padding: 18px 50px 18px 18px;
-}
-
-.footer-distributed form input:focus {
-    outline: none;
-}
-
-
-/* Changing the placeholder color */
-
-.footer-distributed form input::-webkit-input-placeholder {
-    color: #999;
-}
-
-.footer-distributed form input::-moz-placeholder {
-    opacity: 1;
-    color: #999;
-}
-
-.footer-distributed form input:-ms-input-placeholder {
-    color: #999;
-}
-
-
-/* The magnify glass icon */
-
-.footer-distributed form i {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    top: 16px;
-    right: 18px;
-    color: #999;
-    font-size: 18px;
-    margin-top: 6px;
 }
 
 .footer-distributed .footer-company-name a {
